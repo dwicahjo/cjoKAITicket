@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "cjo KAI Ticket Checker",
+  "version": "0.2",
+  "content_scripts": [
+    {
+    "matches": [
+      "https://tiket.kereta-api.co.id/?_it8tnz=TXc9PQ==&_8dnts=YzJOb1pXUjFiR1U9"
+    ],
+    "js": ["jquery-git.min.js", "choose_train.js"]
+    },
+    {
+    "matches": [
+      "https://tiket.kereta-api.co.id/?_it8tnz=TXc9PQ==&_8dnts=WW05dmEybHVadz09"
+    ],
+    "js": ["jquery-git.min.js", "checkbox.js"]
+    },
+	  {
+    "matches": [
+      "https://ibe.kereta-api.co.id/book.sqv"
+    ],
+    "js": ["jquery-git.min.js", "fill_data.js"]
+    },
+    {
+    "matches": [
+      "https://ibe.kereta-api.co.id/confirm_pay_type.sqv?id=*"
+    ],
+    "js": ["jquery-git.min.js", "payment.js"]
+    }   
+  ],
+ "browser_action": {
+  "default_icon": "icon.png"
+ },
+ "background": {
+  "scripts": ["background.js"]
+ }
+}
+
