@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+## cjo KAI Ticket Checker
 This project aims to simplify and accelerate the process of purchasing tickets on tiket.kereta-api.co.id
 ## Steps Installation
 TODO: 
@@ -9,6 +7,3 @@ TODO:
 3. Choose your payment method on payment.js (uncommend the choosen and commend the others)
 4. Open chrome and open tools>extension menu, then check developer mode and install it by browse it's folder
 5. Open tiket.kereta-api.co.id and choose your date then pray for get the ticket :)
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
