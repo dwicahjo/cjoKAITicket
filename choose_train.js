@@ -1,12 +1,12 @@
 // Check the available train and submit it
 var available_train = $('.itButton').length;
 var array_of_trains = new Array();
-var desired_train_name = "FAJAR UTAMA YK"
+var desired_train_name = "SAWUNGGALIH"
 
 //  Select Mode, first is just click the last available ticket
 if(available_train>0){
 	//  $('.itButton').click();
-	//  find_by_name();
+	// find_by_name();
 	find_by_lowest_price();
 }
 
@@ -31,8 +31,14 @@ function find_by_name(){
 			array_of_trains.push($('.itButton')[i]);
 		}		
 	}
+	if(array_of_trains.length == 0){
+		setInterval(function(){
+		$('#input').submit();
+		}, 5000);
+	}else{
 	array_of_trains.sort(compare);
 	array_of_trains[0].click();
+	}
 }
 
 // Comparison function to sort by lower price
