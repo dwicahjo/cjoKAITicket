@@ -2,16 +2,20 @@
   "manifest_version": 2,
   "name": "cjo KAI Ticket Checker",
   "version": "0.2",
+  "permissions": [
+          "tabs", "<all_urls>",
+          "storage"
+        ],
   "content_scripts": [
     {
     "matches": [
-      "https://tiket.kereta-api.co.id/?_it8tnz=TXc9PQ==&_8dnts=YzJOb1pXUjFiR1U9"
+      "https://kai.id/train_schedule"
     ],
     "js": ["jquery-git.min.js", "choose_train.js"]
     },
     {
     "matches": [
-      "https://tiket.kereta-api.co.id/?_it8tnz=TXc9PQ==&_8dnts=WW05dmEybHVadz09"
+      "https://kai.id/train_schedule/booking"
     ],
     "js": ["jquery-git.min.js", "checkbox.js"]
     },

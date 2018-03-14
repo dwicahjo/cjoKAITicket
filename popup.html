@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>CJO KAI Ticket Reserver</title>
+</head>
+<body>
+	<form id="form_data" onsubmit="save_data()">
+		<div>
+			<h4>Input Name </h4>
+			<input type="text" name="username" id="username" placeholder="Input Name" />
+		</div>
+	</form>
+	<button type="submit" form="form_data" value="Submit">Submit</button>
+</body>
+<script> 
+	function save_data() {
+		alert("adasdsa");
+  // Get a value saved in a form.
+  var theValue = document.getElementById("username").value;
+        // Check that there's some code there.
+        if (!theValue) {
+        	message('Error: No value specified');
+        	return;
+        }
+        // Save it using the Chrome extension storage API.
+        chrome.storage.sync.set({'value': theValue}, function() {
+          // Notify that we saved.
+          message('Settings saved');
+      });
+    }
+</script>
+</html>
+
